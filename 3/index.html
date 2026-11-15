@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>კოსმოსის ფაქტები და ფავორიტები</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen p-4 flex items-center justify-center">
+
+    <div class="max-w-xl w-full bg-slate-900 border border-slate-800 p-6 md:p-8 rounded-3xl shadow-2xl">
+
+        <!-- სათაური -->
+        <div class="text-center mb-6">
+            <h1 class="text-2xl md:text-3xl font-extrabold text-sky-400 mb-2">🚀 კოსმოსის ფაქტების გენერატორი</h1>
+            <p class="text-slate-400 text-sm">მოიძიე საინტერესო ცნობები API-დან და შეინახე ფავორიტებში!</p>
+        </div>
+
+        <!-- ძირითადი ფაქტის ბარათი -->
+        <div class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl mb-6 shadow-lg">
+            <p id="fact-text" class="text-lg text-slate-200 italic mb-4">
+                "დააჭირე ღილაკს და აღმოაჩინე კოსმოსი..."
+            </p>
+            <div class="flex items-center justify-between text-xs text-sky-400 font-medium">
+                <span id="fact-source">— წყარო: მოლოდინის რეჟიმი</span>
+                <span id="counter">ნანახია: 0</span>
+            </div>
+        </div>
+
+        <!-- ღილაკები -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-8">
+            <button id="next-btn"
+                class="flex-1 bg-sky-500 hover:bg-sky-600 text-slate-950 font-bold py-3 px-4 rounded-xl transition shadow-lg shadow-sky-500/20 cursor-pointer">
+                ✨ ახალი ფაქტი
+            </button>
+            <button id="save-btn"
+                class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium py-3 px-4 rounded-xl transition cursor-pointer">
+                ⭐ ფავორიტებში შენახვა
+            </button>
+        </div>
+
+        <!-- ფავორიტების სია -->
+        <div class="border-t border-slate-800 pt-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-base font-bold text-slate-200">📚 შენახული ფაქტები</h2>
+                <span id="fav-count"
+                    class="bg-sky-500/10 text-sky-400 text-xs px-2.5 py-0.5 rounded-full border border-sky-500/20">
+                    0 ფაქტი
+                </span>
+            </div>
+
+            <ul id="fav-list" class="space-y-3 max-h-48 overflow-y-auto pr-1">
+                <p id="empty-state" class="text-center py-4 text-slate-500 text-xs">
+                    ჯერ არ გაქვს შენახული ფაქტები.
+                </p>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

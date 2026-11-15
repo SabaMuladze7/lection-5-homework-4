@@ -1,4 +1,4 @@
-
+//ჩასწორებული ვარიანტი
 const fetchBtn = document.getElementById("fetch-btn");
 
 const postTitle = document.getElementById("post-title");
